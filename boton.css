@@ -1,0 +1,49 @@
+:root{
+    --negro:#000000;
+     --blanco:#ffffff;
+     --color__verde:#0b6a38;
+     --color__rojo: #ce0e2d;
+     --tinto:#c8102e;
+     --color__negro_2:#111111;
+ }
+.switchDark{
+    background-color:var(--color__negro_2);
+
+    display:flex;
+    position:relative;
+     cursor:pointer;
+    outline:none;
+    border:none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+ .switchDark span{
+    width:30px;
+    height:30px;
+    line-height:30px;
+    display: block;
+    color: var(--color__negro_2);
+    background: none;    
+}
+.switchDark::after{
+    display: block;
+    background: #ffffff;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 1;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition: all .5s ease;
+    box-shadow: 0 0 1.5px 1.5px rgba(0,0,0,0.5);
+    content: "";
+}
+.switchDark.active{
+    background: var(--color__verde);
+}
+.switchDark.active::after{
+    left: unset;
+    right: 0;
+}
